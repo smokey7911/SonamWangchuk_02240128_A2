@@ -1,4 +1,12 @@
+class PokemonCardBinder:
+    def __init__(self):
+        self.binder = {}
+        self.binder_row = 9
+        self.binder_column = 9
+        self.cards_per_page = self.binder_row * self.binder_column
+        self.max_pokedex = 1000
 
+    def add_pokemon_card(self):
         try:
             pokedex = int(input("Enter the number of Pokedex (1-1000): "))
             if not (1 <= pokedex <= self.max_pokedex):
@@ -69,6 +77,7 @@
                 break
             else:
                 print("Invalid option. Please select 1-4.")
+
 
 if __name__ == "__main__":
     binder_manager = PokemonCardBinder()
